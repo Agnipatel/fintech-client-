@@ -109,7 +109,7 @@ export default function NewsPage() {
     <div className="overflow-x-hidden">
       {/* Hero */}
       <section className="relative py-20 grid-pattern overflow-hidden border-b border-white/8">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-sky-600/8 rounded-full green-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-sky-600/8 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex items-center gap-2 mb-4">
             <Rss className="w-4 h-4 text-indigo-400" />

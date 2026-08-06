@@ -40,7 +40,7 @@ export default function PlatformPage() {
     <div className="overflow-x-hidden">
       {/* Hero */}
       <section className="relative py-32 grid-pattern overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-indigo-600/10 rounded-full green-3xl pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-xs text-white/60 mb-6">
             <TrendingUp className="w-3.5 h-3.5 text-indigo-400" />
@@ -96,16 +96,7 @@ export default function PlatformPage() {
                     ))}
                   </div>
                 </div>
-                <svg className="w-full h-32" viewBox="0 0 600 100" preserveAspectRatio="none">
-                  <defs>
-                    <linearGradient id="pGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#6366f1" stopOpacity="0.3" />
-                      <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M0,60 C60,55 120,70 180,50 C240,30 300,45 360,30 C420,15 480,35 540,20 C570,12 585,15 600,10 L600,100 L0,100 Z" fill="url(#pGrad)" />
-                  <path d="M0,60 C60,55 120,70 180,50 C240,30 300,45 360,30 C420,15 480,35 540,20 C570,12 585,15 600,10" fill="none" stroke="#6366f1" strokeWidth="2" className="chart-line" />
-                </svg>
+
               </div>
               <div className="space-y-3">
                 <div className="glass rounded-lg p-3">

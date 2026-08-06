@@ -57,7 +57,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} dark h-full scroll-smooth`}
     >
-      <body className="min-h-screen bg-background text-foreground">
+      <body className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
 
         {/* Fixed Navbar Height */}

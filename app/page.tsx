@@ -55,6 +55,7 @@ const features = [
     desc: "Orders executed in under 10ms with our global infrastructure spanning 12 data centers.",
     color: "text-yellow-400",
     bg: "bg-yellow-400/10",
+    image: "https://media.licdn.com/dms/image/v2/D4D12AQHiAPeKySTsRw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1737482377095?e=2147483647&v=beta&t=7MK6G8VW-BV5K1f9XGV7pSi7Z5cdGZh2LsyhX5sfN1Q",
   },
   {
     icon: Shield,
@@ -62,6 +63,7 @@ const features = [
     desc: "Your funds are segregated, FDIC-insured up to $500K, with 256-bit encryption.",
     color: "text-emerald-400",
     bg: "bg-emerald-400/10",
+    image: "https://approov.io/hubfs/blog_banners/77.webp",
   },
   {
     icon: Globe,
@@ -69,6 +71,7 @@ const features = [
     desc: "Trade stocks, forex, crypto, ETFs and commodities from 50+ global exchanges.",
     color: "text-sky-400",
     bg: "bg-sky-400/10",
+    image: "https://fintech.global/wp-content/uploads/2023/08/FinTech-Global-launches-Wealth-Market-Map-as-vital-guide-to-the-sector-scaled.jpg",
   },
   {
     icon: BarChart2,
@@ -76,6 +79,7 @@ const features = [
     desc: "Over 200 technical indicators, AI market insights, and real-time chart analysis.",
     color: "text-purple-400",
     bg: "bg-purple-400/10",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSujFqVPeSejjqBIZW_UmeuPlWYpPjcnisf5g&s",
   },
   {
     icon: Cpu,
@@ -83,6 +87,7 @@ const features = [
     desc: "Sentiment analysis, predictive signals, and automated portfolio rebalancing.",
     color: "text-pink-400",
     bg: "bg-pink-400/10",
+    image: "https://www.netforthtech.com/blogs/wp-content/uploads/2025/03/DALL%C2%B7E-2025-03-06-13.59.39-A-modern-and-sleek-digital-illustration-of-a-fintech-app-development-company.-The-image-showcases-a-futuristic-office-with-developers-and-designers-co-1-1024x585.webp",
   },
   {
     icon: Lock,
@@ -90,6 +95,7 @@ const features = [
     desc: "Licensed by FCA (UK), SEC (US), ASIC (AU) and 12 other global regulators.",
     color: "text-orange-400",
     bg: "bg-orange-400/10",
+    image: "https://thedigitalbanker.com/wp-content/uploads/2026/04/AUDDapt-XDC-1024x571.jpg",
   },
 ];
 
@@ -150,12 +156,19 @@ export default function HomePage() {
 
       {/* Hero */}
       <section id="home" className="relative min-h-[92vh] flex items-center grid-pattern overflow-hidden">
-        {/* green-600 orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full green-3xl pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-600/15 rounded-full green-3xl pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 rounded-full green-3xl pointer-events-none" />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+          style={{ backgroundImage: "url('https://img.magnific.com/premium-photo/creative-glowing-forex-chart-with-map-dark-blue-background-trade-finance-concept-3d-rendering_670147-11936.jpg?semt=ais_test_b&w=740&q=80')" }}
+        />
+        <div className="absolute inset-0 bg-black/40" /> {/* Dark overlay */}
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+        {/* green-600 orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-600/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 text-center">
           <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-xs text-white/70 mb-8 fade-up">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             Live markets open · Trusted by 2M+ traders globally
@@ -200,23 +213,23 @@ export default function HomePage() {
           </div>
 
           {/* Floating chart card */}
-          <div className="mt-20 relative max-w-4xl mx-auto">
-            <div className="glass-card p-6 float">
+          <div className="mt-20 relative max-w-4xl mx-auto w-full px-2 sm:px-0">
+            <div className="glass-card p-4 sm:p-6 float overflow-hidden">
               {/* Mock chart */}
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-2">
                 <div>
-                  <div className="text-white font-bold text-xl">BTC/USD</div>
-                  <div className="text-white/50 text-sm">Bitcoin · Crypto</div>
+                  <div className="text-white font-bold text-lg sm:text-xl">BTC/USD</div>
+                  <div className="text-white/50 text-xs sm:text-sm">Bitcoin · Crypto</div>
                 </div>
-                <div className="text-right">
-                  <div className="text-white font-bold text-2xl font-mono">$67,432.80</div>
-                  <div className="text-emerald-400 text-sm flex items-center gap-1 justify-end">
+                <div className="text-left sm:text-right">
+                  <div className="text-white font-bold text-xl sm:text-2xl font-mono">$67,432.80</div>
+                  <div className="text-emerald-400 text-xs sm:text-sm flex items-center gap-1 sm:justify-end">
                     <TrendingUp className="w-3.5 h-3.5" />
                     +2.34% today
                   </div>
                 </div>
               </div>
-              <svg className="w-full h-32" viewBox="0 0 800 120" preserveAspectRatio="none">
+              <svg className="w-full h-24 sm:h-32" viewBox="0 0 800 120" preserveAspectRatio="none">
                 <defs>
                   <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stopColor="#6366f1" stopOpacity="0.3" />
@@ -255,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section id="features" className="py-24">
+      <section id="features" className="py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-xs text-white/60 mb-4">
@@ -275,8 +288,13 @@ export default function HomePage() {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="glass-card p-6 hover:bg-white/8 transition-all group hover:scale-[1.02] hover:glow-sm"
+                className="glass-card p-6 hover:bg-white/8 transition-all group hover:scale-[1.02] hover:glow-sm flex flex-col"
               >
+                <div className="w-full h-40 mb-6 rounded-xl overflow-hidden relative shrink-0">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={f.image} alt={f.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                </div>
                 <div className={`w-12 h-12 rounded-xl ${f.bg} flex items-center justify-center mb-4`}>
                   <f.icon className={`w-6 h-6 ${f.color}`} />
                 </div>
@@ -291,7 +309,7 @@ export default function HomePage() {
       <CTA />
 
       {/* Markets */}
-      <section id="markets" className="py-24 bg-black/20">
+      <section id="markets" className="py-2 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
@@ -332,9 +350,9 @@ export default function HomePage() {
       <CTA />
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-24">
+      <section id="testimonials" className="py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-2">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Loved by <span className="text-green-600">2 million+ traders</span>
             </h2>
@@ -367,13 +385,13 @@ export default function HomePage() {
       {/* CTA Banner */}
       <CTA />
 
-      <section id="faq" className="py-24">
+      <section id="faq" className="py-2">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FAQPage />
         </div>
       </section>
 
-      <CTA />
+
 
       <section id="contact">
         <ContactPage />

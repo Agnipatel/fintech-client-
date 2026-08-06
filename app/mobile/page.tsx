@@ -39,7 +39,7 @@ export default function MobilePage() {
     <div className="overflow-x-hidden">
       {/* Hero */}
       <section className="relative py-24 grid-pattern overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-96 h-[600px] bg-indigo-600/8 rounded-full green-3xl pointer-events-none" />
+        <div className="absolute top-1/2 right-0 w-96 h-[600px] bg-indigo-600/8 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -114,16 +114,7 @@ export default function MobilePage() {
                       <span className="text-emerald-400 text-xs">+$1,247.80</span>
                     </div>
                     <div className="text-3xl font-bold text-white font-mono">$48,392.14</div>
-                    <svg className="w-full h-24" viewBox="0 0 200 80">
-                      <defs>
-                        <linearGradient id="mGrad" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="#6366f1" stopOpacity="0.3" />
-                          <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
-                        </linearGradient>
-                      </defs>
-                      <path d="M0,50 C25,45 50,60 75,35 C100,10 125,40 150,25 C175,10 185,20 200,15 L200,80 L0,80 Z" fill="url(#mGrad)" />
-                      <path d="M0,50 C25,45 50,60 75,35 C100,10 125,40 150,25 C175,10 185,20 200,15" fill="none" stroke="#6366f1" strokeWidth="2" />
-                    </svg>
+
                     <div className="space-y-2">
                       {[
                         { s: "BTC", v: "$67,432", c: "+2.34%", up: true },
